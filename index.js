@@ -10,7 +10,6 @@ function handleFile(req, res, callback){
     if(err) { // se não encontrar o arquivo 
           if(callback){
            if(!callback(req, res)){
-             
               res.writeHead(404, {"Content-Type":"text/html;charset=UTF-8"}); //text/html text/plain application/json
               res.end("<h1>Página Não encontrada</h1>")//msg na tela
            }
